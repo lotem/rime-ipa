@@ -1,0 +1,64 @@
+# Rime schema
+# vim: set sw=2 sts=2 et:
+# encoding: utf-8
+
+schema:
+  schema_id: ipa_yunlong
+  name: "雲龍國際音標"
+  version: "4.4"
+  author:
+    - 潘悟雲，李龍
+    - 修改：Lely <fourseasons4ji@gmail.com>
+  description: |
+    參見http://www.eastling.org/resource.htm之「雲龍國際音標輸入法4.0版」使用說明
+    修改：刪去越南和八思巴字符，增加一些兼容碼，並補充一些字符。偏後、緊音、緊調三個符號不好區分，增加ffp，ffjy，ffjd來輸入。可用 ; 分隔來連續輸入。
+    PUA區字符須匹配IPAPANNEW、LingPan IPA或Doulos SIL字體顯示。
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ 音標, 西文 ]
+
+engine:
+  processors:
+    - ascii_composer
+    - speller
+#    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - abc_segmentor
+#    - punct_segmentor
+    - fallback_segmentor
+  translators:
+#    - punct_translator
+    - table_translator
+
+menu:
+  alternative_select_keys: "ABCDEFGHIJ"
+  page_size: 9
+
+speller:
+  alphabet: 'zyxwvutsrqponmlkjihgfedcba()<>[]\`~.'':1234567890?!^|=-+/'
+  delimiter: ' ;'
+#  delimiter: ';'
+  algebra:
+    - abbrev/^([a-z]).+$/$1/
+    - abbrev/^([12345]).+$/$1/
+    - abbrev/^tcj/tc/
+
+translator:
+  dictionary: ipa_yunlong
+  enable_user_dict: false
+
+style: 
+  font_face: "Doulos SIL"
+  font_point: 16
+  
+#punctuator:
+#  use_space: true
+#  half_shape: &punct
+#    ' ' : { commit: ' ' }
+#  full_shape: *punct

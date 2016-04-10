@@ -1,0 +1,100 @@
+# Rime schema
+# vim: set sw=2 sts=2 et:
+# encoding: utf-8
+
+schema:
+  schema_id: mipa
+  name: "mIPA"
+  version: "2.0"
+  author:
+    - 沈逸磊 <917514182@qq.com>
+  description: |
+    Seamless (ext)IPA input method, with phonological symbol extensions.
+    The author would like to thank 劉楚龍 for the preliminary work.
+    Instructions:
+        The semicolon (;) is the delimiter.
+        Double letters are assigned to bizzare chars, alphabetically, 'ɑβçðɛɸɣɦɿʝɲɮɱŋɔ(p)(q)ɾʃθʊʋɯχʮʒ'.
+        Triple letters are assigned to small capitals.
+        Suffixal '9's are for alveolopalatals and chars bottom-left hooks,
+            '8's for retroflexes/rhotics,
+            '6's for reversed chars and chars with top-right hooks,
+            and '7's for turned/inverted chars.
+        Bars (-) / pipes (|) / slashes (/) / tildes (~) are suffixed to derive the corresponding chars. Bars (-) also indicate ligatures.
+        'q's are suffixed to derive superscripts.
+        Prefixal 'p's & 'pp's are for Chao's tone letters, and 'q's & 'qq's for super- & subscript numerals.
+        Prefixal single commas (,) are for supercombinings, double commas (,,) for subcombinings, triple commas (,,,) for overlayings, and apostrophes (') for spacing chars.
+        Prefixal '0's and '00's are for greeks and cyrillics.
+        The vowel chart: (Note that the code is not unique for some vowels. e.g. [ɘ] may either be 'e-' or 'e6'.)
+            Coronal vowels:
+                [ɿ]:ii  [ʮ]:yy  [ʅ]:i8  [ʯ]:y8
+            Dorsal vowels:
+                [i]:i   [y]:y   [ɨ]:i-  [ʉ]:u-  [ɯ]:m7  [u]:u
+                [ɪ]:iii [ʏ]:yyy                         [ʊ]:uuu
+                [e]:e   [ø]:o/  [ɘ]:e-  [ɵ]:o-  [ɤ]:e/  [o]:o
+                                [ə]:e7
+                [ɛ]:ee  [œ]:oe  [ɜ]:ee- [ɞ]:oo- [ʌ]:eo  [ɔ]:oo
+                [æ]:ae          [ɐ]:a7
+                [a]:a   [ɶ]:oeee                [ɑ]:aa  [ɒ]:aa7
+    See the DICT file for details. NOTE that you shall substitute '9' for '@9' & '@j', '8' for '@8', '7' for '@7', and '6' for '@6' & '@-'.
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ IPA, Latin ]
+
+engine:
+  processors:
+    - ascii_composer
+    - speller
+#    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - abc_segmentor
+#    - punct_segmentor
+    - fallback_segmentor
+  translators:
+#    - punct_translator
+    - table_translator
+
+menu:
+#  alternative_select_keys: "ABCDEFGHIJ"
+  page_size: 5
+
+speller:
+  alphabet: 'ZYXWVUTSRQPONMLKJIHGFEDCBAzyxwvutsrqponmlkjihgfedcba()<>[]\`~.:1234567890?!^|=-+*/,"''#;'
+#  delimiter: ' ;'
+  algebra:
+#    - abbrev/^([a-z]).+$/$1/
+#    - abbrev/^([12345]).+$/$1/
+    - abbrev/^(.).+$/$1/
+#    - abbrev/^tc6/tc/
+    - derive/$/;/
+    - xform/@j/9/
+    - xform/@9/9/
+    - xform/@8/8/
+    - xform/@6/6/
+    - xform/@-/6/
+    - xform/@7/7/
+
+translator:
+  dictionary: MIPA
+  enable_user_dict: false
+  comment_format:
+    - xform/@j/9/
+    - xform/@9/9/
+    - xform/@8/8/
+    - xform/@6/6/
+    - xform/@-/6/
+    - xform/@7/7/
+
+style: 
+  font_face: "Gentium Plus"
+  font_point: 16
+  
+#punctuator:
+#  use_space: true
+#  half_shape: &punct
+#    ' ' : { commit: ' ' }
+#  full_shape: *punct

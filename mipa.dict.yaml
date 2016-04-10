@@ -1,0 +1,1139 @@
+# Rime dictionary
+# encoding: utf-8
+#
+# MIPA
+#
+# Seamless (ext)IPA input method, with phonological symbol extensions.
+# 
+# Author:
+#  - 沈逸磊 <917514182@qq.com>
+#  - The author would like to thank 劉楚龍 for the preliminary work.
+#
+# Instructions:
+# 	The semicolon (;) is the delimiter.
+# 	Double letters are assigned to bizzare chars, alphabetically, 'ɑβçðɛɸɣɦɿʝɲɮɱŋɔ(p)(q)ɾʃθʊʋɯχʮʒ'.
+# 	Triple letters are assigned to small capitals.
+# 	Suffixal '@j's are for alveolopalatals,
+# 		'@9's for chars bottom-left hooks,
+# 		'@8's for retroflexes/rhotics,
+# 		'@-'s for reversed chars,
+# 		'@6's for chars with top-right hooks,
+# 		and '@7's for turned/inverted chars.
+# 	Bars (-) / pipes (|) / slashes (/) / tildes (~) are suffixed to derive the corresponding chars. Bars (-) also indicate ligatures.
+# 	'q's & 'qq's are suffixed to derive super- & subscripts.
+# 	Prefixal 'p's & 'pp's are for Chao's tone letters, and 'q's & 'qq's for super- & subscript numerals.
+# 	Prefixal single commas (,) are for supercombinings, double commas (,,) for subcombinings, triple commas (,,,) for overlayings, and apostrophes (') for spacing chars.
+# 	Prefixal '0's and '00's are for greeks and cyrillics.
+
+
+---
+name: mipa
+version: "2.0"
+sort: original
+...
+
+
+# ordinary letters
+ꞎ	l-@8	# ad hoc: voiceless retroflex lateral fricative
+ǃ	!	
+ǀ	|	
+ǁ	||	
+ǂ	|=	
+a	a	
+ᴀ	aaa	# ad hoc: open central unrounded vowel
+ɐ	a@7	
+ɑ	aa	
+ɒ	aa@7	
+æ	ae	
+b	b	
+ʙ	bbb	
+ɓ	b@6	
+bʱ	bh	
+c	c	
+ç	cc	
+ɔ	c@7	# tor
+ɔ	oo	# tor
+ɕ	c@j	
+cʰ	ch	
+d	d	
+ɗ	d@6	
+ᶑ	d@8@6	# ad hoc: retroflex implosive
+ð	dd	
+ʤ	dzz-	
+dʱ	dh	
+dz	dz	
+dʐ	dz@8	
+dʑ	dz@j	
+dzʱ	dzh	
+dʐʱ	dz@8h	
+dʑʱ	dz@jh	
+dʒ	dzz	
+dʒʱ	dzzh	
+ɖ	d@8	
+ɖʱ	d@8h	
+ʣ	dz-	
+ʥ	dz@j-	
+ȡ	d@j	# ad hoc: voiced aleolopalatal stop
+ȡʱ	d@jh	# ad hoc
+e	e	
+ᴇ	eee	# ad hoc: mid front unrounded vowel
+ɛ	ee	
+ə	e@7	
+ɚ	e@8	
+ɘ	e@-	
+ɘ	e-	
+ɜ	ee@-	
+ɜ	ee-	
+ɝ	ee@-@8	
+ɝ	ee-@8	
+ɞ	oee@-	
+ɞ	oo-	
+f	f	
+ʩ	fnn-	# ext: 
+ɢ	ggg	
+ɠ	g@6	
+ʛ	ggg@6	
+ɣ	gg	
+ɤ	e/	# !
+ɡ	g	
+ɢʱ	gggh	
+ɡʱ	gh	
+h	h	
+ʜ	hhh	
+ħ	h-	
+ɦ	hh	
+ɥ	h@7	
+ʮ	yy	# ad hoc: dental rounded vowel
+ʯ	y@8	# ad hoc: retroflex rounded vowel
+ɧ	hh@9	# !
+i	i	
+ɪ	iii	
+ɨ	i-	
+j	j	
+ɟ	f@7	# tor
+ɟ	j-	# tor
+ʄ	f@7@6	# tor
+ʄ	j-@6	# tor
+ʄ	ss-	# tor
+ʝ	jj	
+ɟʱ	j-h	
+k	k	
+kʰ	kh	
+l	l	
+ʟ	lll	
+ɫ	l~	
+ɭ	l@8	
+ɬ	l-	
+ɮ	ll	
+ʪ	ls-	
+ʫ	lz-	
+ȴ	l@j	# ad hoc: alveolopalatal lateral approximant
+m	m	
+ɱ	mm	
+ɯ	m@7	# tor
+ɯ	ww	# tor
+ɰ	m@7|	# tor
+ɰ	ww|	# tor
+n	n	
+ɴ	nnn	
+ɲ	kk	# !
+ɳ	n@8	
+ȵ	n@j	# ad hoc: alveolopalatal nasal
+ŋ	nn	
+o	o	
+ɵ	o-	
+ø	o/	
+ɶ	oeee	
+ɶ	oooe	
+ɶ	oooeee	
+œ	oe	
+p	p	
+ɸ	ff	
+pʰ	ph	
+q	q	
+qʰ	qh	
+r	r	
+ʀ	rrr	
+ᴙ	rrr@-	# ad hoc: epiglottal trill
+ɽ	r@8	
+ɹ	r@7	
+ʁ	rrr@7	
+ɺ	r@7|	
+ɻ	r@7@8	
+ɾ	rr	
+ɿ	ii	# ad hoc: dental unrounded vowel
+ɺ̢	r@7|@8	# ad hoc: retroflex lateral flap
+s	s	
+ʂ	s@8	
+ʃ	ss	
+ʅ	i@8	# ad hoc: retroflex unrounded vowel
+t	t	
+ʈ	t@8	
+ʧ	tss-	
+ʨ	tc@j-	
+ȶ	t@j	# ad hoc: alveolopalatal voiceless stop
+tɕ	tc@j	
+tɕʰ	tc@jh	
+tʰ	th	
+ʈʰ	t@8h	
+ȶʰ	t@jh	# ad hoc
+ts	ts	
+tʂ	ts@8	
+tʃ	tss	
+tsʰ	tsh	
+tʂʰ	ts@8h	
+tʃʰ	tssh	
+ʦ	ts-	
+u	u	
+ʉ	u-	
+ʊ	uu	
+ʊ	uuu	
+v	v	
+ʋ	vv	
+ʌ	eo	# tor
+ʌ	v@7	# tor
+w	w	
+ʍ	w@7	
+x	x	
+y	y	
+ʏ	yyy	
+ʎ	y@7	
+z	z	
+ʐ	z@8	
+ʑ	z@j	
+ʒ	zz	
+ʔ	?	
+ʕ	?@-	
+ʡ	?-	
+ʢ	?-@-	
+ʢ	?@--	
+ʘ	ooo.	# !
+ʬ	'ww	# ext: bilabial percussive
+ʭ	'[[	# ext: bidental percussive
+ⱱ	v@6	# !
+β	bb	
+θ	tt	
+χ	xx	
+
+# modifier letters (-qq for subscripts)
+ꟸ	hhh-q
+ꟹ	oeq
+ꭞ	l~q
+ˀ	?q
+ˤ	?@-q
+ᵃ	aq
+ᵄ	a@7q
+ᶛ	aa@7q
+ᵇ	bq
+ᶜ	cq
+ᵓ	c@7q
+ᶝ	c@jq
+ᵈ	dq
+ᶞ	ddq
+ᵉ	eq
+ᶟ	ee@-q
+ᵊ	e@7q
+ᶾ	zzq
+ᵋ	eeq
+ᶠ	fq
+ᶢ	gq
+ˠ	ggq
+ᶣ	h@7q
+ʰ	hq
+ʱ	hhq
+ⁱ	iq
+ᶦ	iiiq
+ᶤ	i-q
+ᶡ	f@7q
+ᶡ	j-q
+ᶨ	jjq
+ʲ	jq
+ᵏ	kq
+ᶫ	lllq
+ᶩ	l@8q
+ˡ	lq
+ᵐ	mq
+ᶬ	mmq
+ᵚ	m@7q
+ᶭ	m@7|q
+ⁿ	nq
+ᶰ	nnnq
+ᶮ	kkq
+ᶯ	n@8q
+ᵑ	nnq
+ᵒ	oq
+ᶱ	o-q
+ᵖ	pq
+ᶲ	ffq
+ʳ	rq
+ʴ	r@7q
+ʵ	r@7@8q
+ʶ	rrr@7q
+ˢ	sq
+ᶳ	s@8q
+ᶴ	ssq
+ᵗ	tq
+ᶿ	ttq
+ᵘ	uq
+ᶶ	u-q
+ᶷ	uuq
+ᵛ	vq
+ᶹ	vvq
+ᶺ	v@7q
+ʷ	wq
+ˣ	xq
+ʸ	yq
+ᶻ	zq
+ᶼ	z@8q
+ᶽ	z@jq
+ᵅ	aaq
+ᵝ	bbq
+ᵡ	xxq
+
+# supercombining
+̄	,-	
+́	,/	
+̀	,\	
+̋	,//	
+̏	,\\	
+̂	,^	
+̂	,/\	
+᷄	,-/	
+᷇	,/-	
+᷅	,\-	
+᷆	,-\	
+᷉	,/\/	
+᷈	,\/\	
+̍	,`	
+̇	,.	
+̈	,..	
+̌	,\/	
+̆	,u	
+̃	,n	
+̃	,~	
+̊	,o	
+͡	,c	
+͊	,~/
+͋	,~:	
+͌	,~~	
+̽	,x	
+͆	,[	
+͆	,]	# tor
+
+# subcombining
+͢	,,->	
+͜	,,c	
+̘	,,<|	
+̙	,,|>	
+̜	,,(	
+̝	,,^-
+̞	,,-v
+̟	,,+	
+̠	,,-	### 0320 COMBINING MINUS SIGN BELOW
+̡	,,j	
+̡	,,@9	
+̢	,,r	
+̢	,,@8	
+̣	,,.	
+̤	,,..	
+̥	,,o	
+̩	,,`	
+̪	,,[	
+̫	,,w	
+͉	,,@7	
+̬	,,v	
+̯	,,^	
+̯	,,n	
+͍	,,<->	
+̰	,,~	
+͎	,,^|	
+̹	,,)	
+̺	,,]	
+̻	,,[]	
+̼	,,m	
+͇	,,=	
+͈	,,||	
+
+# overlaying
+˞	,,,r
+̚	,,,7
+̴	,,,~	
+
+# spacing
+˭	=q	# tenuis
+ʼ	,q	# ejective
+̚	]q	# tor: no-audible release
+#˹	[q	# ad hoc: audible release
+ꜛ	^|q	# upstep
+ꜜ	|vq	# downstep
+ꜝ	!q	# ad hoc: downstep
+ꜞ	!@7q	# ad hoc: upstep
+#ꜟ	
+ˈ	`	# primary stress
+ˌ	``	# secondary stress
+ː	:	# long
+ˑ	::	# half-long
+˔	'^-	# raised (spacing)
+˕	'-v	# lowered (spacing)
+˖	'+	# advanced (spacing)
+˗	'-	# retracted (spacing)
+‿	'u	# link
+↗	'r	# global rise
+↘	'f	# global fall
+|	'|	# minor group
+‖	'||	# major group
+
+# tones symbols
+ᵀ	't
+ᴴ	'h
+ᴹ	'm
+ᴸ	'l
+ᴮ	'b
+꜀	'1	
+꜁	'2	
+꜂	'3	
+꜃	'4	
+꜄	'5	
+꜅	'6	
+꜆	'7	
+꜇	'8	
+
+# math symbols
++	+	
+−	--	
+×	/\	
+÷	-:	
+±	+-	
+∓	-+	
+√	\/	
+=	=	
+≠	=/
+≡	=-
+≈	~~	
+<	<	
+>	>	
+≪	<<	
+≫	>>	
+≤	<=	
+≥	>=	
+∅	ooo/	# empty set
+
+# miscellaneous symbols
+◌	ooo	# dottted circle
+Ø	ooo/	# O with slash overlay
+;	;;
+,	',
+?	'?
+!	'!
+:	':
+'	''
+‘	'''
+’	''''
+"	'"
+“	'""
+”	'"""
+⟨	<<<	
+⟩	>>>	
+⟦	[[	
+⟧	]]	
+(	(	
+)	)	
+.	.
+,	,	
+/	/	
+[	[	
+\	\	
+]	]	
+`	`	
+~	~	
+-	-	
+*	*	
+¡	!@7	
+#⬚	xxx	# U+2B1A DOTTED SQUARE
+#○	ooo0	# U+25CB WHITE CIRCLE
+·	'.	
+…	...	
+↑	^|	
+☝	^||	
+→	->	
+☞	-->	
+↓	|v	
+☟	||v	
+←	<-	
+☜	<--	
+♭	'll	
+♮	'mm	
+♯	'hh	
+✓	'\/	
+✗	'/\
+†	+|	
+‡	++	
+′	'prime
+″	'prime2
+‴	'prime3
+
+# spaces and dashes
+ 	..	# space
+ 	'nbsp	# U+00A0 NO-BREAK SPACE
+ 	'nnbsp	# U+202F NARROW NO-BREAK SPACE
+#﻿	'zwnbsp	# U+FEFF ZERO WIDTH NO-BREAK SPACE : BOM, ZWNBSP
+–	'ndash
+—	'mdash
+­	'shy	# U+00AD: soft hyphen
+
+# tone letters (pp- for left-stem tone letters)
+꜌	p10
+꜋	p20
+꜊	p30
+꜉	p40
+꜈	p50
+꜑	pp10
+꜖	pp1
+꜐	pp20
+꜕	pp2
+꜏	pp30
+꜔	pp3
+꜎	pp40
+꜓	pp4
+꜍	pp50
+꜒	pp5
+˩	p1
+˨	p2
+˧	p3
+˦	p4
+˥	p5
+˩˩	p11
+˩˨	p12
+˩˧	p13
+˩˦	p14
+˩˥	p15
+˨˩	p21
+˨˨	p22
+˨˧	p23
+˨˦	p24
+˨˥	p25
+˧˩	p31
+˧˨	p32
+˧˧	p33
+˧˦	p34
+˧˥	p35
+˦˩	p41
+˦˨	p42
+˦˧	p43
+˦˦	p44
+˦˥	p45
+˥˩	p51
+˥˨	p52
+˥˧	p53
+˥˦	p54
+˥˥	p55
+˩˩˨	p112
+˩˩˧	p113
+˩˩˦	p114
+˩˩˥	p115
+˩˨˩	p121
+˩˨˨	p122
+˩˧˩	p131
+˩˧˨	p132
+˩˧˧	p133
+˩˦˩	p141
+˩˦˨	p142
+˩˦˧	p143
+˩˦˦	p144
+˩˥˩	p151
+˩˥˨	p152
+˩˥˧	p153
+˩˥˦	p154
+˩˥˥	p155
+˨˩˩	p211
+˨˩˨	p212
+˨˩˧	p213
+˨˩˦	p214
+˨˩˥	p215
+˨˨˩	p221
+˨˨˧	p223
+˨˨˦	p224
+˨˨˥	p225
+˨˧˩	p231
+˨˧˨	p232
+˨˧˧	p233
+˨˦˩	p241
+˨˦˨	p242
+˨˦˧	p243
+˨˦˦	p244
+˨˥˩	p251
+˨˥˨	p252
+˨˥˧	p253
+˨˥˦	p254
+˨˥˥	p255
+˧˩˩	p311
+˧˩˨	p312
+˧˩˧	p313
+˧˩˦	p314
+˧˩˥	p315
+˧˨˨	p322
+˧˨˧	p323
+˧˨˦	p324
+˧˨˥	p325
+˧˧˦	p334
+˧˧˥	p335
+˧˦˩	p341
+˧˦˨	p342
+˧˦˧	p343
+˧˦˦	p344
+˧˥˩	p351
+˧˥˨	p352
+˧˥˧	p353
+˧˥˦	p354
+˧˥˥	p355
+˦˩˩	p411
+˦˩˨	p412
+˦˩˧	p413
+˦˩˦	p414
+˦˩˥	p415
+˦˨˨	p422
+˦˨˧	p423
+˦˨˦	p424
+˦˨˥	p425
+˦˧˧	p433
+˦˧˦	p434
+˦˧˥	p435
+˦˦˥	p445
+˦˥˩	p451
+˦˥˨	p452
+˦˥˧	p453
+˦˥˦	p454
+˦˥˥	p455
+˥˩˩	p511
+˥˩˨	p512
+˥˩˧	p513
+˥˩˦	p514
+˥˩˥	p515
+˥˨˨	p522
+˥˨˧	p523
+˥˨˦	p524
+˥˨˥	p525
+˥˧˧	p533
+˥˧˦	p534
+˥˧˥	p535
+˥˦˦	p544
+˥˦˥	p545
+˥˥˩	p551
+˥˥˨	p552
+˥˥˧	p553
+˥˥˦	p554
+
+# tone numbers (qq- for subscripts)
+₋	qq-
+₍	qq(
+₎	qq)
+₊	qq+
+₌	qq=
+⁻	q-
+⁽	q(
+⁾	q)
+₊	q+
+₌	q=
+₀	qq0
+₁	qq1
+₂	qq2
+₃	qq3
+₄	qq4
+₅	qq5
+₆	qq6
+₇	qq7
+₈	qq8
+₉	qq9
+⁰	q0
+¹	q1
+²	q2
+³	q3
+⁴	q4
+⁵	q5
+⁶	q6
+⁷	q7
+⁸	q8
+⁹	q9
+¹¹	q11
+¹²	q12
+¹³	q13
+¹⁴	q14
+¹⁵	q15
+²¹	q21
+²²	q22
+²³	q23
+²⁴	q24
+²⁵	q25
+³¹	q31
+³²	q32
+³³	q33
+³⁴	q34
+³⁵	q35
+⁴¹	q41
+⁴²	q42
+⁴³	q43
+⁴⁴	q44
+⁴⁵	q45
+⁵¹	q51
+⁵²	q52
+⁵³	q53
+⁵⁴	q54
+⁵⁵	q55
+¹¹²	q112
+¹¹³	q113
+¹¹⁴	q114
+¹¹⁵	q115
+¹²¹	q121
+¹²²	q122
+¹³¹	q131
+¹³²	q132
+¹³³	q133
+¹⁴¹	q141
+¹⁴²	q142
+¹⁴³	q143
+¹⁴⁴	q144
+¹⁵¹	q151
+¹⁵²	q152
+¹⁵³	q153
+¹⁵⁴	q154
+¹⁵⁵	q155
+²¹¹	q211
+²¹²	q212
+²¹³	q213
+²¹⁴	q214
+²¹⁵	q215
+²²¹	q221
+²²³	q223
+²²⁴	q224
+²²⁵	q225
+²³¹	q231
+²³²	q232
+²³³	q233
+²⁴¹	q241
+²⁴²	q242
+²⁴³	q243
+²⁴⁴	q244
+²⁵¹	q251
+²⁵²	q252
+²⁵³	q253
+²⁵⁴	q254
+²⁵⁵	q255
+³¹¹	q311
+³¹²	q312
+³¹³	q313
+³¹⁴	q314
+³¹⁵	q315
+³²²	q322
+³²³	q323
+³²⁴	q324
+³²⁵	q325
+³³⁴	q334
+³³⁵	q335
+³⁴¹	q341
+³⁴²	q342
+³⁴³	q343
+³⁴⁴	q344
+³⁵¹	q351
+³⁵²	q352
+³⁵³	q353
+³⁵⁴	q354
+³⁵⁵	q355
+⁴¹¹	q411
+⁴¹²	q412
+⁴¹³	q413
+⁴¹⁴	q414
+⁴¹⁵	q415
+⁴²²	q422
+⁴²³	q423
+⁴²⁴	q424
+⁴²⁵	q425
+⁴³³	q433
+⁴³⁴	q434
+⁴³⁵	q435
+⁴⁴⁵	q445
+⁴⁵¹	q451
+⁴⁵²	q452
+⁴⁵³	q453
+⁴⁵⁴	q454
+⁴⁵⁵	q455
+⁵¹¹	q511
+⁵¹²	q512
+⁵¹³	q513
+⁵¹⁴	q514
+⁵¹⁵	q515
+⁵²²	q522
+⁵²³	q523
+⁵²⁴	q524
+⁵²⁵	q525
+⁵³³	q533
+⁵³⁴	q534
+⁵³⁵	q535
+⁵⁴⁴	q544
+⁵⁴⁵	q545
+⁵⁵¹	q551
+⁵⁵²	q552
+⁵⁵³	q553
+⁵⁵⁴	q554
+
+# numerals
+0	0
+1	1
+2	2
+3	3
+4	4
+5	5
+6	6
+7	7
+8	8
+9	9
+
+# latin capitals
+A	A
+B	B
+C	C
+D	D
+E	E
+F	F
+G	G
+H	H
+I	I
+J	J
+K	K
+L	L
+M	M
+N	N
+O	O
+P	P
+Q	Q
+R	R
+S	S
+T	T
+U	U
+V	V
+W	W
+X	X
+Y	Y
+Z	Z
+À	'A\
+Á	'A/
+Â	'A/\
+Ã	'A~
+Ä	'A..
+Å	'AO
+Æ	'AE
+Ç	'CC
+È	'E\
+É	'E/
+Ê	'E/\
+Ë	'E..
+Ì	'I\
+Í	'I/
+Î	'I/\
+Ï	'I..
+Ð	'D-
+Ñ	'N~
+Ò	'O\
+Ó	'O/
+Ô	'O/\
+Õ	'O~
+Ö	'O..
+Ø	'O/
+Ù	'U\
+Ú	'U/
+Û	'U/\
+Ü	'U..
+Ý	'Y/
+Þ	'TH
+ß	'ss
+à	'a\
+á	'a/
+â	'a/\
+ã	'a~
+ä	'a..
+å	'ao
+æ	'ae
+ç	'cc
+è	'e\
+é	'e/
+ê	'e/\
+ë	'e..
+ì	'i\
+í	'i/
+î	'i/\
+ï	'i..
+ð	'd-
+ñ	'n~
+ò	'o\
+ó	'o/
+ô	'o/\
+õ	'o~
+ö	'o..
+ø	'o/
+ù	'u\
+ú	'u/
+û	'u/\
+ü	'u..
+ý	'y/
+þ	'th
+ÿ	'y..
+g	'g
+Œ	'OE
+
+# APA
+č	'c\/
+ǰ	'j\/
+š	's\/
+ž	'z\/
+ᴅ	'ddd
+ᴜ	'uuu
+ł	'l/
+ƛ	'y@7/
+ř	'r\/
+ǯ	'zz\/
+̓	,,	# U+0313 COMBINING COMMA ABOVE
+̕	,,,,	# U+0315 COMBINING COMMA ABOVE RIGHT
+
+# obsolete IPAs
+ɩ	'ii
+ɷ	'uu
+ᵻ	'iii-	
+ᵾ	'uuu-	
+ƥ	'p@6
+ƭ	't@6
+ƈ	'c@6
+ƙ	'k@6
+ʠ	'q@6
+ʇ	't@7
+ʗ	'c@8	# !
+ʖ	'?@7
+
+
+# greek letters (beta code, v = y)
+α	0a
+β	0b
+γ	0g
+δ	0d
+ε	0e
+ζ	0z
+η	0h
+θ	0q	#
+ι	0i
+κ	0k
+λ	0l
+μ	0m
+ν	0n
+ξ	0c	#
+ο	0o
+π	0p
+ρ	0r
+ς	0j	#
+σ	0s
+τ	0t
+υ	0u
+φ	0f
+χ	0x	#
+ψ	0v	#
+ψ	0y	#
+ω	0w	#
+Α	0A
+Β	0B
+Γ	0G
+Δ	0D
+Ε	0E
+Ζ	0Z
+Η	0H
+Θ	0Q	#
+Ι	0I
+Κ	0K
+Λ	0L
+Μ	0M
+Ν	0N
+Ξ	0C	#
+Ο	0O
+Π	0P
+Ρ	0R
+Σ	0J	#
+Σ	0S
+Τ	0T
+Υ	0U
+Φ	0F
+Χ	0X	#
+Ψ	0V	#
+Ψ	0Y	#
+Ω	0W	#
+
+# cyrillic letters
+А	00A
+Б	00B
+В	00V
+Г	00G
+Д	00D
+Е	00YE
+Ж	00ZH
+З	00Z
+И	00YI
+Й	00Y
+К	00K
+Л	00L
+М	00M
+Н	00N
+О	00O
+П	00P
+Р	00R
+С	00S
+Т	00T
+У	00U
+Ф	00F
+Х	00KH
+Ц	00TS
+Ч	00CH
+Ш	00SH
+Щ	00SHCH
+Ъ	00WW
+Ы	00I
+Ь	00YY
+Э	00E
+Ю	00YU
+Я	00YA
+а	00a
+б	00b
+в	00v
+г	00g
+д	00d
+е	00ye
+ж	00zh
+з	00z
+и	00yi
+й	00y
+к	00k
+л	00l
+м	00m
+н	00n
+о	00o
+п	00p
+р	00r
+с	00s
+т	00t
+у	00u
+ф	00f
+х	00kh
+ц	00ts
+ч	00ch
+ш	00sh
+щ	00shch
+ъ	00ww
+ы	00i
+ь	00yy
+э	00e
+ю	00yu
+я	00ya
+Ё	00YO
+ё	00yo
+
+# superscript Latin
+ᵃ	'aq
+ᵇ	'bq
+ᶜ	'cq
+ᵈ	'dq
+ᵉ	'eq
+ᶠ	'fq
+ᵍ	'gq
+ʰ	'hq
+ⁱ	'iq
+ʲ	'jq
+ᵏ	'kq
+ˡ	'lq
+ᵐ	'mq
+ⁿ	'nq
+ᵒ	'oq
+ᵖ	'pq
+#	'qq
+ʳ	'rq
+ˢ	'sq
+ᵗ	'tq
+ᵘ	'uq
+ᵛ	'vq
+ʷ	'wq
+ˣ	'xq
+ʸ	'yq
+ᶻ	'zq
+ᴬ	Aq
+ᴮ	Bq
+ᴰ	Dq
+ᴱ	Eq
+ᴳ	Gq
+ᴴ	Hq
+ᴵ	Iq
+ᴶ	Jq
+ᴷ	Kq
+ᴸ	Lq
+ᴹ	Mq
+ᴺ	Nq
+ᴼ	Oq
+ᴾ	Pq
+ᴿ	Rq
+ᵀ	Tq
+ᵁ	Uq
+ⱽ	Vq
+ᵂ	Wq
+ₐ	'aqq
+ₑ	'eqq
+ₕ	'hqq
+ᵢ	'iqq
+ⱼ	'jqq
+ₖ	'kqq
+ₗ	'lqq
+ₘ	'mqq
+ₙ	'nqq
+ₒ	'oqq
+ₚ	'pqq
+ᵣ	'rqq
+ₛ	'sqq
+ₜ	'tqq
+ᵤ	'uqq
+ᵥ	'vqq
+ₓ	'xqq
+
+
+
+# ̧	ff.c	
+# ̠	ffp	### 0320 COMBINING MINUS SIGN BELOW
+# ̱	ff---	### 0331 COMBINING MACRON BELOW
+# ̱	ffjy	### 0331 COMBINING MACRON BELOW
+# ̲	ff--	### 0332 COMBINING LOW LINE
+# ̲	ffjd	### 0332 COMBINING LOW LINE
+# ᷂	ffs	
+# ʻ	fff'	
+# ʽ	fff''''	
+# ˂	fff<	
+# ˃	fff>	
+# ˄	fff^	
+# ˅	fffv	
+# ˋ	fff\	
+# ˊ	fff/	
+# đ	d-	
+# ʚ	bbf	
+# ᶚ	zzr	
+# ʞ	kd	
+# ƞ	ngs	
+# ɼ	rl	
+# ᶘ	ssr	
+# ⱳ	wx	
+# ђ	hng	
+
+
+#⁲	qss	
+#̐	fv.	
+#˺		
+#∅	ooo	
+#⁰	0	
+#0̸	ooo	# 0 with slach overlay
+#ᴂ	aed	
+#ᵆ	aedq	
+#ı	is	
+#ɩ	ib	
+#ᶥ	ibq	
+
+
+# no comment
+#	#
