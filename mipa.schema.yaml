@@ -79,7 +79,7 @@ speller:
     - xform/@7/7/
 
 translator:
-  dictionary: MIPA
+  dictionary: mipa
   enable_user_dict: false
   comment_format:
     - xform/@j/9/
